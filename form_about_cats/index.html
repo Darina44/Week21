@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник</title>
+    <link rel="shortcut icon" href="https://www.flaticon.com/svg/static/icons/svg/1530/1530720.svg" type="image/svg">
+    <style>
+        input:valid:required {
+            border-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Заполните форму</h1>
+    <form>
+        <div>
+            <label for="name" maxlength="10">Кличка питомца</label>
+            <input type="text" id="petName" required />
+        </div>
+        <fieldset>
+            <legend>Имя и контакты владельца</legend>
+            <div>
+                <label for="name1">Имя</label>
+                <input type="text" id="name1" required />
+            </div>
+            <div>
+                <label for="phone">Номер телефона</label>
+                <input type="number" id="phone" required />
+            </div>
+        </fieldset>
+        <div>
+            Порода кошки <br />
+            <select name="breed" id="breed">
+                <option value="empty" selected></option>
+                <option value="abyssinian">абиссинская</option>
+                <option value="british">британская</option>
+                <option value="maine coon">мейн-кун</option>
+                <option value="persian">персидская</option>
+            </select>
+        </div>
+        <div>
+            Пол питомца<br />
+            <label for="female">Самка</label>
+            <input type="radio" name="sex" id="female" value="female" /></br>
+            <label for="male">Самец</label>
+            <input type="radio" name="sex" id="male" value="male" />
+        </div>
+        <div>
+            Чем питается?<br />
+            <input type="checkbox" name="food_type" id="dry" value="dry" />
+            сухой корм<br />
+            <input type="checkbox" name="food_type" id="wet" value="wet" />
+            влажный корм<br />
+            <input type="checkbox" name="food_type" id="natural" value="natural" />
+            натуральный корм<br />
+        </div>
+        <div>
+            Комментарий владельца<br />
+            <textarea rows="8" cols="30" maxlength="200">Комментарий</textarea>/>
+        </div>
+        <div>
+            Приложите фото питомца <br />
+            <input type="file">
+        </div>
+        <div>
+            <button type="button" id="btn">Сохранить</button>
+        </div>
+    </form>
+
+    <script src="/form_about_cats/index.js"></script>
+</body>
+
+</html>
